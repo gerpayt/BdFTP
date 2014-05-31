@@ -236,7 +236,7 @@ class FtpConnection(threading.Thread):
                 ret = self.client.move(src, os.path.dirname(dst), os.path.basename(dst))
 
             if ret['errno'] == 0:
-                for i in ret['info']:
+                #for i in ret['info']:
                     #print i['path'], i['errno']
                 self.message(250, "RNTO to " + dst)
             else:
